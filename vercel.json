@@ -1,0 +1,20 @@
+{
+  "buildCommand": "echo 'Static site, no build needed'",
+  "outputDirectory": ".",
+  "installCommand": "npm install",
+  "framework": null,
+  "routes": [{
+    "src": "/[^\\.]+/([^.]+)",
+    "dest": "/$1"
+  }, {
+    "src": "/(?!.+\\.(css|js|json|png|svg|gif|webp))(.*)",
+    "dest": "/index.html"
+  }],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "root": "."
+}
